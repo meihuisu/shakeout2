@@ -213,14 +213,6 @@ if(shakeout2_ucvm_debug){ fprintf(stderrfp,">> Using In-Memory access \n"); }
                 } else {
                     get_interp_property(dataset, &(pt_info[i]), &(data[i]));
             }
-
-	    // If result is None, then need to process for shakeout21d
-	    // with shakeout21d with depth
-            if(isnan(data[i].vp) && isnan(data[i].vs) && shakeout2_configuration->enable_1d) {
-
-if(shakeout2_ucvm_debug){ fprintf(stderrfp,">> calling get_one_nuscal1d_property\n"); }
-                get_one_shakeout21d_property(dataset, &(pt_info[i]), &(data[i]));
-            }
         }
 
     } else { 
@@ -408,12 +400,6 @@ if(shakeout2_ucvm_debug){ fprintf(stderrfp, "enabled Binary data\n"); }
                 config->too_big=0;
                 if (strcmp(value,"on") == 0) { config->too_big=1;
 if(shakeout2_ucvm_debug){ fprintf(stderrfp, "enabled tooBig -- use external data access\n"); }
-                }
-            }
-            if (strcmp(key, "enable_1d") == 0) { 
-                config->enable_1d=0;
-                if (strcmp(value,"on") == 0) { config->enable_1d=1;
-if(shakeout2_ucvm_debug){ fprintf(stderrfp, "enabled shakeout21d to fill all empty returns\n"); }
                 }
             }
          /* for each dataset, allocate a model dataset's block and fill in */ 

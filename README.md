@@ -36,7 +36,8 @@ To install this package on your computer, please run the following commands:
   aclocal -I m4
   autoconf
   automake --add-missing --force-missing
-  ./configure --prefix=/dir/to/install
+  ./configure --prefix=/dir/to/install --enable-shared --with-hdf5-libdir=${UCVM_INSTALL_PATH}/lib/hdf5/lib --with-hdf5-incdir=${UCVM_INSTALL_PATH}/lib/hdf5/include --with-netcdf-libdir=${UCVM_INSTALL_PATH}/lib/netcdf/lib --with-netcdf-incdir=${UCVM_INSTALL_PATH}/lib/netcdf/lib/include
+
   make
   make install
 </pre>
