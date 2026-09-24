@@ -22,6 +22,6 @@ binary_data = on
 #                   250 increments upto 10000
 #                   500 increments upto 30000
 #                   1000 increments upto 99000
-data_file = { "LABEL" : "final", "FILE" : "model_SHAKEOUT2_v1.nc" }
+data_file = { "LABEL" : "final", "FILE" : "model_CVMSI_taper_so2.nc" }
  
 
