@@ -1,0 +1,27 @@
+# UTM Zone
+utm_zone=11
+
+# Model directory
+model_dir = shakeout2 
+model_data_path = https://g-3a9041.a78b8.36fe.data.globus.org/ucvm/models
+
+# set this if netcdf data is too big to load in memory, use nc_FUNCTIONS to access
+too_big = off
+
+# interpolation only works when using in-memory data access (too_big == off)
+interpolation = on 
+# set this if want to use vp.dat/vs.dat/rho.dat in memory
+binary_data = on
+
+## SW corner
+#longitdue:-120.033556
+#latitude:31.869638
+#depth: ...     
+#                   50 increments upto 3000 
+#                   100 increments upto 5000
+#                   250 increments upto 10000
+#                   500 increments upto 30000
+#                   1000 increments upto 99000
+data_file = { "LABEL" : "final", "FILE" : "model_SHAKEOUT2_v1.nc" }
+ 
+
