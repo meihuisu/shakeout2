@@ -11,7 +11,7 @@ too_big = off
 # interpolation only works when using in-memory data access (too_big == off)
 interpolation = on 
 # set this if want to use vp.dat/vs.dat/rho.dat in memory
-binary_data = on
+binary_data = off 
 
 ## SW corner
 #longitdue:-120.033556
